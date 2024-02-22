@@ -8,7 +8,9 @@ import cors from 'cors';
 const app = express();
 //middleware for parsing req body
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: ['http://localhost:5173','https://book-store-app.onrender.com'],
+}));
 // app.use(cors(
 //     {
 //         origin:"http://localhost:3000",
