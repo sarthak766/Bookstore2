@@ -9,7 +9,12 @@ import cors from 'cors';
 const app = express();
 //middleware for parsing req body
 app.use(express.json());
-app.use(cors());
+const allowedOrigins = ['https://bookstore2-fullstack.vercel.app'];
+app.use(cors({
+  origin: allowedOrigins,
+  methods: ['GET', 'POST', 'DELETE','PUT'], // Allowed HTTP methods
+  credentials: true // Allow credentials
+}));
 // app.use(cors(
 //     {
 //         origin:"http://localhost:3000",
