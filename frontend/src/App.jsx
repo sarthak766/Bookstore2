@@ -8,7 +8,7 @@ import Editbook from './pages/Editbook'
 import Login from './pages/Login'
 import Register from './pages/Register'
 import HeroPage from './pages/HeroPage'
-
+import axios from 'axios';
 const App = () => {
   axios.defaults.withCredentials = true;
   return (
