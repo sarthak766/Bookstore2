@@ -12,7 +12,7 @@ const Register = () => {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:4000/register', {
+      await axios.post('https://bookstore2-one.vercel.app/register', {
         username,
         email,
         password
