@@ -16,7 +16,7 @@ const Editbook = () => {
 
   useEffect(() => {
     setLoading(true);
-    axios.get(`http://localhost:4000/books/${id}`)
+    axios.get(`https://bookstore2-one.vercel.app/books/${id}`)
       .then((res) => {
         setTitle(res.data.title);
         setAuthor(res.data.author);
@@ -33,7 +33,7 @@ const Editbook = () => {
   const handleEditBook = () => {
     const data = { title, author, publishYear };
     setLoading(true);
-    axios.put(`http://localhost:4000/books/${id}`, data)
+    axios.put(`https://bookstore2-one.vercel.app/books/${id}`, data)
       .then(() => {
         setLoading(false);
         enqueueSnackbar('Book Edited Successfully', { variant: 'success' });
