@@ -21,7 +21,7 @@ const Createbook = () => {
     .then(()=>{
       setLoading(false);
       enqueueSnackbar('Book created successfully',{variant :'success'})
-      navigate('/')
+      navigate('/home')
     })
     .catch((err)=>{
       setLoading(false);
@@ -31,12 +31,15 @@ const Createbook = () => {
     })
   }
   return (
-    <div className='p-4'>
+    <div className='p-4'
+    style={{
+      backgroundImage: `url('https://img.freepik.com/free-photo/ancient-books-adorn-library-carefully-arranged-with-classics-rare-gems_157027-2488.jpg?t=st=1708797488~exp=1708801088~hmac=f6c19a802b8d60f8eba7bac43f6525f46e8b448596577069ce34b95e8eca2ff3&w=1060')`, height:'100vh',width:'100vw'
+    }}>
       <Backbutton/>
-      <h1 className='text-3xl my-4'>Create Book</h1>
+      <h1 className='text-3xl text-white my-4'>Create Book</h1>
       {loading ?(<Spinner/>)
       :('')}
-      <div className='flex flex-col border-2 border-sky-400 rounded-xl w-[600px] p-4 mx-auto'>
+      <div className='flex flex-col border-2 border-sky-400 rounded-xl w-[600px] p-4 mx-auto bg-white'>
         <div className='my-4'>
           <label className='text-4xl mr-4 text-gray-500'>Title</label>
           <input

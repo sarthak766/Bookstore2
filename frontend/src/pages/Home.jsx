@@ -26,7 +26,7 @@ const Home = () => {
   },[]);
 
   return (
-    <div className="p-4">
+    <div className="p-4" style={{ backgroundImage: "url('https://img.freepik.com/premium-photo/books-library-generative-ai_220873-19768.jpg?w=1060')", backgroundSize: 'cover', backgroundPosition: 'center',height:'100vh',width:'!00vw' }}>
       <div className="flex justify-center items-center gap-x-4">
            <button className="bg-sky-300 hover:bg-sky-600 px-4 py-1 rounded-lg"
             onClick={()=>setShowType('table')}
@@ -42,7 +42,7 @@ const Home = () => {
       <div className="flex justify-between items-center">
         <h1 className="text-3xl my-8">Books-List</h1>
         <Link to="/books/create">
-          <MdOutlineAddBox className="text-sky-800 text-4xl" />
+          <MdOutlineAddBox className="text-white text-4xl" />
         </Link>
       </div>
       {loading ? (
