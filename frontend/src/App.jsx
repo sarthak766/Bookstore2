@@ -10,6 +10,7 @@ import Register from './pages/Register'
 import HeroPage from './pages/HeroPage'
 
 const App = () => {
+  axios.defaults.withCredentials = true;
   return (
     <Routes>
       <Route path="/" element={<HeroPage/>} />
