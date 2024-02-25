@@ -13,8 +13,8 @@ function Bookstable({ books }) {
             <tr className="bg-gray-200">
               <th className="p-3 border border-gray-300">No</th>
               <th className="p-3 border border-gray-300">Title</th>
-              <th className="p-3 border border-gray-300 md:hidden">Author</th>
-              <th className="p-3 border border-gray-300 md:hidden">Publish Year</th>
+              <th className="p-3 border border-gray-300 hidden md:table-cell">Author</th>
+              <th className="p-3 border border-gray-300 hidden md:table-cell">Publish Year</th>
               <th className="p-3 border border-gray-300">Operations</th>
             </tr>
           </thead>
@@ -23,8 +23,8 @@ function Bookstable({ books }) {
               <tr key={book._id} className="bg-white">
                 <td className="p-3 border border-gray-300">{index + 1}</td>
                 <td className="p-3 border border-gray-300">{book.title}</td>
-                <td className="p-3 border border-gray-300 md:hidden">{book.author}</td>
-                <td className="p-3 border border-gray-300 md:hidden">{book.publishYear}</td>
+                <td className="p-3 border border-gray-300 hidden md:table-cell">{book.author}</td>
+                <td className="p-3 border border-gray-300 hidden md:table-cell">{book.publishYear}</td>
                 <td className="p-3 border border-gray-300">
                   <div className="flex justify-center space-x-4">
                     <Link to={`/books/details/${book._id}`}>
