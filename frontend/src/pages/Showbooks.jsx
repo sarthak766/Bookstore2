@@ -23,7 +23,7 @@ const Showbooks = () => {
   }, [id]);
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100 py-12 px-4 sm:px-6 lg:px-8" style={{ backgroundImage: "url('https://img.freepik.com/free-photo/book-library-with-open-textbook_1150-5924.jpg?t=st=1708802166~exp=1708805766~hmac=f8f2f4f0e8d0c7d761a3c747b69476b26cbed84c30aa3a2f44e33003217c7707&w=996')" , backgroundSize: 'cover', backgroundPosition: 'center'}}>
+    <div className="min-h-screen flex items-center justify-center bg-gray-100 py-12 px-4 sm:px-6 lg:px-8" style={{ backgroundImage: "url('https://images.pexels.com/photos/1029141/pexels-photo-1029141.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')" , backgroundSize: 'cover', backgroundPosition: 'center'}}>
       <div className="max-w-3xl w-full bg-white rounded-lg shadow-lg p-6">
         <Backbutton />
         <h1 className="text-3xl my-4 font-bold">Book Details</h1>
