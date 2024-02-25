@@ -19,7 +19,7 @@ function BookSingleCard({ book }) {
         <p className="text-xs text-gray-600">{book.publishYear}</p>
       </div>
       <img
-        src='https://img.freepik.com/free-photo/book-library-with-open-textbook_1150-5924.jpg?t=st=1708802166~exp=1708805766~hmac=f8f2f4f0e8d0c7d761a3c747b69476b26cbed84c30aa3a2f44e33003217c7707&w=996'
+        src='https://images.pexels.com/photos/1172018/pexels-photo-1172018.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
         alt={book.title}
         className="w-full h-40 object-cover rounded-md mb-4"
       />
