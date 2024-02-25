@@ -23,7 +23,7 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8" style={{ backgroundImage: `url('https://img.freepik.com/free-photo/library-with-books_1063-98.jpg?t=st=1708801333~exp=1708804933~hmac=d876045d4f1d643d6b83b74bfc83b0021de97d1133a6385d95ad2a193b5595b8&w=996')`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+    <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8" style={{ backgroundImage: `url('https://images.pexels.com/photos/1610992/pexels-photo-1610992.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
       <div className="max-w-md w-full space-y-8 bg-white bg-opacity-75 rounded-md p-8">
         <div>
           <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">Sign in to your account</h2>
