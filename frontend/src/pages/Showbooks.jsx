@@ -23,38 +23,39 @@ const Showbooks = () => {
   }, [id]);
 
   return (
-     <div
-    className="fixed top-0 left-0 right-0 bottom-0 z-50 flex justify-center items-center"
-    onClick={onClose}
-  >
-    <div
-      onClick={(e) => e.stopPropagation()}
-      className="w-full max-w-md h-full max-h-full overflow-auto bg-white rounded-xl p-8 flex flex-col relative shadow-lg"
-    >
-      <AiOutlineClose
-        className="absolute top-4 right-4 text-gray-600 cursor-pointer"
-        onClick={onClose}
-      />
-      <h2 className="w-fit px-4 py-1 bg-red-300 rounded-lg text-white">
-        {book.publishYear}
-      </h2>
-      <h4 className="my-2 text-gray-600 text-lg">{book._id}</h4>
-      <div className="flex items-center gap-x-2">
-        <FaPencilAlt className="text-red-400 text-xl" />
-        <h2 className="my-1 text-xl font-semibold">{book.title}</h2>
-      </div>
-      <div className="flex items-center gap-x-2">
-        <CiUser className="text-red-400 text-xl" />
-        <h2 className="my-1 text-xl font-semibold">{book.author}</h2>
-      </div>
-      <p className="mt-4 text-gray-700 font-medium">About Book:</p>
-      <p className="my-2 text-gray-600">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime quam
-        ut numquam accusamus adipisci fugit laboriosam! Laborum, impedit
-        molestias. Esse laborum ea cum?
-      </p>
-    </div>
-  </div>
+   <div className="min-h-screen flex items-center justify-center bg-gray-100 py-12 px-4 sm:px-6 lg:px-8" style={{ backgroundImage: "url('https://images.pexels.com/photos/1029141/pexels-photo-1029141.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')" , backgroundSize: 'cover', backgroundPosition: 'center'}}>
+      <div className="max-w-3xl w-full bg-white rounded-lg shadow-lg p-6">
+        <Backbutton />
+        <h1 className="text-3xl my-4 font-bold">Book Details</h1>
+        {loading ? (
+          <Spinner />
+        ) : (
+          <div>
+            <div className="my-4">
+              <span className="text-lg font-semibold text-gray-600">ID: </span>
+              <span className="text-lg">{book._id}</span>
+            </div>
+            <div className="my-4">
+              <span className="text-lg font-semibold text-gray-600">Title: </span>
+              <span className="text-lg">{book.title}</span>
+            </div>
+            <div className="my-4">
+              <span className="text-lg font-semibold text-gray-600">Author: </span>
+              <span className="text-lg">{book.author}</span>
+            </div>
+            <div className="my-4">
+              <span className="text-lg font-semibold text-gray-600">Publish Year: </span>
+              <span className="text-lg">{book.publishYear}</span>
+            </div>
+            <div className="my-4">
+              <span className="text-lg font-semibold text-gray-600">Create Time: </span>
+              <span className="text-lg">{new Date(book.createdAt).toString()}</span>
+            </div>
+            <div className="my-4">
+              <span className="text-lg font-semibold text-gray-600">Update Time: </span>
+              <span className="text-lg">{new Date(book.updatedAt).toString()}</span>
+            </div>
+          </div>
   );
 };
 
