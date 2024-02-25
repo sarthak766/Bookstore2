@@ -38,7 +38,7 @@ const Home = () => {
       <div className="flex justify-between items-center w-full">
         <h1 className="text-3xl my-8 text-white">Books-List</h1>
         <Link to="/books/create">
-          <MdOutlineAddBox className="text-white text-4xl" />
+           <h1 className="text-white mr-4 text-2xl">Add Book  <MdOutlineAddBox className="text-white text-4xl" /></h1>
         </Link>
       </div>
       {loading ? (
